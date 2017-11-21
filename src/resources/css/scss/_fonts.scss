@@ -2,17 +2,17 @@
 
 @font-face {
   font-family: 'RustFont';
-  src: url('/src/resources/fonts/NexaRustSlab-BlackShadow01-Free-webfont.eot'); /* IE9 Compat Modes */
-  src: url('/src/resources/fonts/NexaRustSlab-BlackShadow01-Free-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/src/resources/fonts/NexaRustSlab-BlackShadow01-Free-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/src/resources/fonts/NexaRustSlab-BlackShadow01-Free-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('/src/resources/fonts/NexaRustSlab-BlackShadow01-Free-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/src/resources/fonts/NexaRustSlab-BlackShadow01-Free-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('../fonts/NexaRustSlab-BlackShadow01-Free-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/NexaRustSlab-BlackShadow01-Free-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/NexaRustSlab-BlackShadow01-Free-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/NexaRustSlab-BlackShadow01-Free-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/NexaRustSlab-BlackShadow01-Free-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/NexaRustSlab-BlackShadow01-Free-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
   font-family: 'Quadrat';
-  src: url('/src/resources/fonts/Quadrat-Regular.ttf') format('truetype')
+  src: url('../fonts/Quadrat-Regular.ttf') format('truetype')
 }
 .rusty {
     font-family: 'Quadrat', Fallback, sans-serif;

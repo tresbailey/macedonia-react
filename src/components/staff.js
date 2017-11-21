@@ -1,23 +1,11 @@
 import React, { Component } from "react";
+import tom from '../resources/images/Tom-Campbell.png';
 
 export default class Staff extends React.Component {
   render() {
-	const articleStyle = {
-		backgroundColor: 'white',
-		minHeight: '100vh',
-		width: '100vw',
-	}
-	const divStyle = {
-		background: 'url("src/resources/images/IMG_0459.png") no-repeat center center fixed',
-		backgroundSize: 'cover',
-		height: '200vh',
-		display: 'flex',
-		flexDirection: 'column',
-    	justifyContent: 'flex-end',
-	};
   return (
-	  <div style={divStyle}>
-        <article className="screen-box flex-column" style={articleStyle}>
+	  <div className="parallax-container">
+        <article className="screen-box flex-column simple-parallax">
         <header className="special container">
         <div className="winger">
           <span className="fa cross"></span>
@@ -26,7 +14,7 @@ export default class Staff extends React.Component {
         </header>
   <div className="categories">
     <div className="profile">
-    <img className="img-responsive profile-pic summary" src={'src/resources/images/Tom-Campbell.png'} />
+    <img className="img-responsive profile-pic summary" src={ tom } />
     </div>
     <div className="profile-details">
     <h2 className="standout" >Pastor Tom Campbell</h2>

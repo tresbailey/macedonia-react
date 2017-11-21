@@ -3,22 +3,9 @@ import React, { Component } from "react";
 export default class Believe extends React.Component {
 
   render() {
-	const articleStyle = {
-		backgroundColor: 'white',
-		minHeight: '100vh',
-		width: '100vw',
-	}
-	const divStyle = {
-		background: 'url("src/resources/images/IMG_0459.png") no-repeat center center fixed',
-		backgroundSize: 'cover',
-		height: '200vh',
-		display: 'flex',
-		flexDirection: 'column',
-    	justifyContent: 'flex-end',
-	};
     return (
-	  <div id="believe-wrapper" style={divStyle}>
-      <article id="we-believe" className="screen-box flex-column" style={articleStyle} >
+	  <div id="believe-wrapper" className="parallax-container">
+      <article id="we-believe" className="screen-box flex-column simple-parallax">
       <header className="special container">
       <div className="winger">
         <span className="fa cross"></span>

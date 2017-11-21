@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import logo from '../resources/images/macedonia-logo-minimal.png';
 
 export default class Navbar extends Component {
     constructor(props){
@@ -40,7 +41,7 @@ export default class Navbar extends Component {
           <div className="main-lockup">
               <div className="lockup-logo">
                   <a href="/">
-                      <img src={'src/resources/images/macedonia-logo-minimal.png'} />
+                      <img src={ logo } />
                   </a>
               </div>
               <div className="link-lockup flex-column">
@@ -51,7 +52,7 @@ export default class Navbar extends Component {
               </div>
                 <div id="primary-menu-"
                     className="lockup-link-item">
-                    <a href="" id="pm-link-" >Sermons</a>
+                    <a href="/sermons" id="pm-link-" >Sermons</a>
                 </div>
               </div>
           </div>

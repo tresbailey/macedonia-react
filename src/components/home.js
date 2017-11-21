@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../resources/images/macedonia-logo-white.png';
 import Worships from "./worships.js";
 import Believe from "./believe.js";
 import Location from "./location.js";
@@ -20,7 +21,7 @@ export default class Home extends React.Component {
               <div className="jumbotron jumbotron-fluid">
                 <div className="tagline-wrapper">
                   <div className="main-tagline">
-                    <img src={'src/resources/images/macedonia-logo-white.png'} />
+                    <img src={ logo } />
                   </div>
                 </div>
               </div>

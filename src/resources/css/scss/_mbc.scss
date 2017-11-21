@@ -618,7 +618,7 @@ button > i.fa-cart-plus {
   .fa {
     margin: 0 1rem;
     &.cross {
-      background-image: url('/src/resources/images/logo.png');
+      background-image: url('../images/logo.png');
       background-repeat: no-repeat;
       background-size: cover;
       width: 7rem;
@@ -825,6 +825,22 @@ img.profile-pic {
     width: 100vw;
     padding: 2rem;
   }
+}
+
+.simple-parallax {
+	background-color: white;
+	min-height: 100vh;
+	width: 100vw;
+}
+
+.parallax-container {
+	background: url("../images/IMG_0459.png") no-repeat center center fixed;
+	background-size: cover;
+  background-color: white;
+	height: 200vh;
+	display: flex;
+	flex-direction: column;
+  justify-content: flex-end;
 }
 
 @media all and (max-width: 850px) {
