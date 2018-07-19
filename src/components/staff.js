@@ -12,7 +12,7 @@ export default class Staff extends React.Component {
         </div>
         <h2 className="rusty">Leading Us</h2>
         </header>
-  <div className="categories">
+  <div className="categories small-screen-break">
     <div className="profile">
     <img className="img-responsive profile-pic summary" src={ tom } />
     </div>

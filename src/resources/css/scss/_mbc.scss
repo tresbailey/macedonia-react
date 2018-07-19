@@ -228,11 +228,18 @@ footer {
 }
 
 .tagline-box {
-  background-color: #645862;
+  background-color: $cb-blue-light;
   //background-image: url("../images/choir-banner.png");
   background-size: cover;
   color: white;
   cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .softer {
+    color: $gray-lighter;
+  }
 }
 
 .main-marquee {
@@ -245,9 +252,7 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-left: 4rem;
-      padding-right: 4rem;
-      padding-top: 10rem;
+      padding: 4rem;
   }
 }
 
@@ -473,9 +478,6 @@ footer {
   }
 	.profile {
     flex-basis: 30vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 	}
   .profile-details {
     flex-basis: 60vw;
@@ -855,8 +857,47 @@ img.profile-pic {
     margin-top: 9rem;
   }
 }
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px)  {
+	.softer {
+		font-size: 3rem;
+	}
+	.lockup-link-item {
+		& > a {
+			font-size: 2rem;
+		}
+	}
+	.lockup-logo {
+		img {
+			width: 20rem;
+		}
+	}
+	.link-lockup {
+		a {
+			font-size: 2rem;
+		}
+	}
+	img.profile-pic {
+		width: 15rem;
+		height: 15rem;
+	}
 
-@media all and (max-width:500px) {
+	.parallax-container {
+		background-image: none;
+		height: 100vh;
+	}
+
+	.small-screen-break {
+		flex-direction: column;
+	}
+	.screen-box {
+		justify-content: center;
+	}
+	
+}
+
+@media all and (max-width:800px) {
 
   .col-md-12 {
     width: 100vw;
@@ -867,6 +908,17 @@ img.profile-pic {
       max-width: 10rem;
     }
   }
+	.small-screen-break {
+		flex-direction: column;
+	}
+	.screen-box {
+		justify-content: center;
+	}
+
+	img.profile-pic {
+		width: 15rem;
+		height: 15rem;
+	}
 
   .link-lockup {
     flex-direction: column;
@@ -993,6 +1045,5 @@ img.profile-pic {
       flex-direction: column;
     }
   }
-
 }
 

@@ -14,7 +14,7 @@ export default class Location extends React.Component {
         <h2 className="rusty">Reaching Us</h2>
         </header>
         <div>&nbsp;</div>
-        <ul className="buttons">
+        <ul className="softer">
           <li>216 Macedonia Road</li>
           <li>Gaffney, SC 29341</li>
           <li>864.489.7712</li>
