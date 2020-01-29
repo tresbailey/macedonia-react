@@ -1,10 +1,12 @@
 import React, {Component} from "react";
-import logo from '../resources/images/macedonia-logo-minimal.png';
+import { Link } from "react-router-dom";
+import logo from '../../resources/images/macedonia-logo-minimal.png';
+import './navbar.scss';
 
 export default class Navbar extends Component {
     constructor(props){
       super(props);
-      this.state={isPrelim:true};
+      this.state={isPrelim: props.isPrelim};
       this.hideBar = this.hideBar.bind(this)
     }
 
@@ -17,7 +19,6 @@ export default class Navbar extends Component {
     }
 
     hideBar(){
-       let {isPrelim} = this.state
        var elem = document.getElementById('believe-wrapper');
        var offset = this.getOffset(elem);
        window.pageYOffset >= offset.top?
@@ -27,17 +28,21 @@ export default class Navbar extends Component {
     }
 
     componentDidMount() {
+        if (this.state.isPrelim) {
         window.addEventListener('scroll', this.hideBar);        
+        }
     }
 
     componentWillUnmount() {
+        if (this.state.isPrelim) {
         window.removeEventListener('scroll', this.hideBar);
+        }
     }
 
   render() {
-      let prelim_menu = this.state.isPrelim?"preliminary-menu":"";
+      console.log(this.state);
       return (
-      <nav id="main-header" className="navbar-default navbar-fixed-top preliminary-menu" role="navigation" ref="navbar">
+      <nav id="main-header" className={"navbar-default navbar-fixed-top " + (this.state.isPrelim ? 'preliminary-menu' : "")} role="navigation" ref="navbar">
           <div className="main-lockup">
               <div className="lockup-logo">
                   <a href="/">
@@ -50,10 +55,16 @@ export default class Navbar extends Component {
                       <span className="fa fa-facebook-official"></span>
                   </a>
               </div>
+              <div className="flex-row">
                 <div id="primary-menu-"
                     className="lockup-link-item">
-                    <a href="/sermons" id="pm-link-" >Sermons</a>
+                    <Link to='/sermons'>Sermons</Link>
                 </div>
+                <div id="primary-menu-"
+                    className="lockup-link-item">
+                    <Link to='/newsletters'>Newsletters</Link>
+                </div>
+            </div>
               </div>
           </div>
       </nav>

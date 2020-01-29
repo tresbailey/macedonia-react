@@ -1,0 +1,29 @@
+@import "../../resources/css/scss/_mbcVariables";
+.central-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sermon-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+  background-color: $gray-lightest;
+}
+
+.sermon-details {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.sermon-image {
+  width: 25%;
+  img {
+    width: 100%;
+  }
+}

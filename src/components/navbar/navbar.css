@@ -1,0 +1,19 @@
+
+.lockup-link-item {
+  & > a {
+    color: $cb-blue;
+    text-transform: uppercase;
+    font-size: 1rem;
+    &.dropdown-toggle-split {
+      padding-right: 0rem;
+    }
+  }
+  &:hover {
+    //border: 1px solid $cb-blue;
+  }
+  &:last-of-type .dropdown-menu {
+    right: 0;
+    left: initial;
+  }
+}
+

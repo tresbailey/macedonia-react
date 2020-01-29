@@ -1,0 +1,17 @@
+.times {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px)  {
+  .serviceTitle {
+      font-size: 5rem;
+  }
+
+  .flexible.flex-row {
+      flex-direction: column !important;
+      align-items: center;
+  }
+}

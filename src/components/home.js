@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from '../resources/images/macedonia-logo-white.png';
-import Worships from "./worships.js";
-import Believe from "./believe.js";
-import Location from "./location.js";
-import Staff from "./staff.js";
-import Navbar from "./navbar.js";
+import Worships from "./worship/worships.js";
+import Believe from "./main-boxes/believe.js";
+import Location from "./main-boxes/location.js";
+import Staff from "./main-boxes/staff.js";
+import FeaturedStudies from "./main-boxes/studies.js";
+import Navbar from "./navbar/navbar.js";
 import Footer from "./footer.js";
 
 export default class Home extends React.Component {
@@ -12,7 +13,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-      <Navbar />
+      <Navbar isPrelim="true"/>
       <article>
       <div className="container-fluid primary-content window-height tagline-box">
         <div className="row">
@@ -33,6 +34,7 @@ export default class Home extends React.Component {
       </article>
       <Believe ref="beliefs"/>
 	  <Staff/>
+	  <FeaturedStudies />
       <Location/>
       <Footer />
       </div>

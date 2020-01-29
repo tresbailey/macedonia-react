@@ -1,0 +1,135 @@
+@import "../../resources/css/scss/_mbcVariables";
+.preliminary-menu {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+	background-image: none;
+	box-shadow: none;
+  background-color: transparent;
+  flex-direction: column;
+  position: absolute;
+  &.navbar-default {
+    background-color: transparent;
+		background-image: none;
+		box-shadow: none;
+    border: none;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+  .main-lockup {
+    width: 100%;
+    justify-content: space-between;
+    .lockup-logo {
+      display: none;
+    }
+    .fa {
+      color: white;
+    }
+    .link-lockup {
+    .lockup-link-item {
+      a {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 1rem;
+      }
+      &:hover {
+        //border: 1px solid white;
+      }
+      .dropdown-menu {
+        background-color: white;
+        border-color: white;
+        .dropdown-item {
+          color: $cb-blue;
+          background-color: white;
+          a {
+            color: $cb-blue;
+          }
+        }
+      }
+    }
+    }
+  }
+}
+
+.navbar-default {
+  background-color: white;
+  color: $cb-blue;
+  border-bottom: 2px solid $cb-blue;
+  & > a {
+    color: $cb-blue;
+  }
+  &.navbar-fixed-top {
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+.main-lockup {
+  display: flex;
+  padding: 0.3rem;
+  min-height: 5rem;
+  .fa {
+    color: $cb-blue;
+  }
+}
+
+.main-lockup > * {
+  flex: 1;
+}
+
+.lockup-logo {
+  flex: 2;
+  font-size: xx-large;
+  font-weight: 500;
+  a {
+    color: $cb-blue;
+  }
+  img {
+    width: 10rem;
+  }
+}
+
+.icon-lockup {
+  margin-right: 1rem;
+  justify-content: flex-end;
+}
+
+@mixin link-menu() {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 1rem;
+  align-items: flex-end;
+}
+
+.link-lockup {
+  @include link-menu();
+  flex: 2;
+  justify-content: space-evenly;
+}
+
+.lockup-link-item {
+  & > a {
+    color: $cb-blue;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 1rem;
+    &.dropdown-toggle-split {
+      padding-right: 0rem;
+    }
+  }
+  &:hover {
+    //border: 1px solid $cb-blue;
+  }
+  &:last-of-type .dropdown-menu {
+    right: 0;
+    left: initial;
+  }
+}
+

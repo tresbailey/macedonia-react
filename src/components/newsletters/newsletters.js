@@ -3,18 +3,18 @@ import logo from '../../resources/images/macedonia-logo-white.png';
 import axios from 'axios';
 import Footer from "../footer.js";
 import Navbar from "../navbar/navbar.js";
-import SermonOption from './sermon_option.js';
+import Newsletter from './newsletter.js';
 
-export default class Sermons extends React.Component {
+export default class Newsletters extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { sermons: [] };
+        this.state = { newsletters: [] };
     }
 
     componentDidMount() {
-        axios.get('https://68bb8j4plk.execute-api.us-east-1.amazonaws.com/dev/macedonia-static-site/recordings')
+        axios.get('https://68bb8j4plk.execute-api.us-east-1.amazonaws.com/dev/macedonia-static-site/newsletters/')
             .then(res => {
-                this.setState({sermons: res.data });
+                this.setState({newsletters: res.data})
             })
     }
 
@@ -31,9 +31,9 @@ export default class Sermons extends React.Component {
                     <div className="winger">
                       <span className="fa cross"></span>
                     </div>
-                    <h2 className="rusty">Sermons</h2>
+                    <h2 className="rusty">Newsletters</h2>
                     </header>
-                    {this.state.sermons.map((sermon, index) => <SermonOption sermon_file={sermon} />)}
+                    {this.state.newsletters.map((newsletter, index) => <Newsletter newsletter_file={newsletter} />)}
                  </article>
                 <Footer />
                 </div>

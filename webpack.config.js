@@ -13,8 +13,12 @@ module.exports = {
 	],
 	output: {
 		path: __dirname + '/dist',
-		filename: 'app.bundle.js'
+		filename: 'app.bundle.js',
+        publicPath: '/',
 	},
+    devServer: {
+        historyApiFallback: true
+    },
 	resolve: {
 		extensions: [ '.js', '.jsx'],
 		modules: ['node_modules']
